@@ -1,16 +1,15 @@
-console.log("helslo");
+console.log("helslos");
 
 const a = document.title = "Tabular Data"//name the title of the document
 
-//test
 const test = async () => {
-    const response = await fetch("tabular_data/assets/test.csv");
+    const response = await fetch("./assets/ZonAnn.Ts+dSST.csv");
+    // const response = await fetch("./assets/test.csv");
     console.log(response);
-    const data = response.text();
+    const data = await response.text();//forgot the await, that's why I was having that issue with the promise pending
     console.log(data);
+    return response
 }
 
 test();
 
-//test commit... something is wrong with the commit... my files are messed up. I will fix it later.
-////sss sss
